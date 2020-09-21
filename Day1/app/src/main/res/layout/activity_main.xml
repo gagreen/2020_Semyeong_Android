@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    layout_width, layout_height : 모든 위젯의 필수요소 (가로, 세로 크기)
+        match_parent : 부모의 사이즈에 맞춤
+        wrap_content : 요소의 내용에 사이즈 맞춤
+
+    gravity : 레이아웃 위치 정렬
+        center : 가운데
+        center_horizontal : 가로만 가운데로
+        center_vertical : 세로만 가운데로
+        start : 왼쪽 (부모 뷰그룹의 시작점)
+        end : 오른쪽 (부모 뷰그룹의 마지막)
+        등
+
+    orientation : 놓는 방식
+        vertical : 세로
+        horizontal : 가로
+
+    id : 식별자 지정 (Primary Key)
+    text : 안에 글자 지정
+
+    RelativeLayout : 상대적으로 위치 지정
+        layout_below : 값 아래에 위치
+        layout_above : 값 위에 위치
+ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="앵냥~~ World!"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edittext"
+            android:text="입력" />
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview"
+            android:hint="이름 입력" />
+    </RelativeLayout>
+
+
+</LinearLayout>
